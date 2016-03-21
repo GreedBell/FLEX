@@ -237,6 +237,9 @@
 
 + (void)load
 {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0) {
+        return;
+    }
     dispatch_async(dispatch_get_main_queue(), ^{
         [[[self class] sharedManager] registerDefaultSimulatorShortcuts];
     });

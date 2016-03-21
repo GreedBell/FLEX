@@ -101,6 +101,9 @@ didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask delegate:(id <NSU
 
 + (void)load
 {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0) {
+        return;
+    }
     // We don't want to do the swizzling from +load because not all the classes may be loaded at this point.
     dispatch_async(dispatch_get_main_queue(), ^{
         if ([self isEnabled]) {

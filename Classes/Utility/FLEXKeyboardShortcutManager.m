@@ -135,6 +135,9 @@
 
 + (void)load
 {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0) {
+        return;
+    }
     SEL originalKeyEventSelector = NSSelectorFromString(@"handleKeyUIEvent:");
     SEL swizzledKeyEventSelector = [FLEXUtility swizzledSelectorForSelector:originalKeyEventSelector];
     

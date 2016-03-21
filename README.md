@@ -10,6 +10,9 @@ FLEX (Flipboard Explorer) is a set of in-app debugging and exploration tools for
 
 ![View Hierarchy Exploration](http://engineering.flipboard.com/assets/flex/basic-view-exploration.gif)
 
+## Difference with [Flipboard/FLEX](https://github.com/Flipboard/FLEX)
+
+`pod` add iOS6 support,but can not be used below iOS8.
 
 ## Give Yourself Debugging Superpowers
 - Inspect and modify views in the hierarchy.
